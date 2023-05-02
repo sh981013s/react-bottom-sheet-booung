@@ -45,7 +45,12 @@
     "build": "react-scripts build",
     "test": "react-scripts test",
     "eject": "react-scripts eject",
-    "prepare": "rm -rf dist && mkdir dist && tsc && NODE_ENV=production babel src --out-dir dist --ignore '**/*.test.tsx'"
+    "prepare": "rm -rf dist && mkdir dist && tsc && NODE_ENV=production babel src --out-dir dist --ignore '**/*.test.tsx'",
+    "lint": "eslint 'src/**/*.{js,ts,tsx}'",
+    "lint:fix": "eslint 'src/**/*.{js,ts,tsx}' --fix",
+    "prettier": "prettier 'src/**/*.{js,ts,tsx}' --check",
+    "prettier:fix": "prettier 'src/**/*.{js,ts,tsx}' --write",
+    "format": "prettier 'src/**/*.{js,ts,tsx}' --write && eslint 'src/**/*.{js,ts,tsx}' --fix"
   },
   "eslintConfig": {
     "extends": [
@@ -70,7 +75,13 @@
     "@babel/core": "^7.21.5",
     "@babel/preset-env": "^7.21.5",
     "@types/styled-components": "^5.1.26",
+    "@typescript-eslint/eslint-plugin": "^5.59.2",
+    "@typescript-eslint/parser": "^5.59.2",
     "babel-plugin-styled-components": "^2.1.1",
-    "cross-env": "^7.0.3"
+    "cross-env": "^7.0.3",
+    "eslint": "^8.39.0",
+    "eslint-config-prettier": "^8.8.0",
+    "eslint-plugin-prettier": "^4.2.1",
+    "prettier": "^2.8.8"
   }
 }

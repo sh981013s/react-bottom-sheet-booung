@@ -1,3 +1,3 @@
-import MyBottomSheet from "./components/MyBottomSheet";
+import MyBottomSheet from './components/MyBottomSheet';
 
 export { MyBottomSheet };
