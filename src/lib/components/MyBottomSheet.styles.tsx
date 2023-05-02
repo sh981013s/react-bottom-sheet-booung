@@ -1,6 +1,6 @@
 import styled from 'styled-components';
 
-export const ModalOverlay = styled.div`
+export const BottomSheetOverlay = styled.div`
   position: fixed;
   top: 0;
   left: 0;
@@ -13,7 +13,7 @@ export const ModalOverlay = styled.div`
   z-index: 1000;
 `;
 
-export const ModalContent = styled.div`
+export const BottomSheetContent = styled.div`
   position: relative;
   background-color: #fff;
   padding: 1rem;

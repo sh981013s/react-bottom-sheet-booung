@@ -1,12 +1,12 @@
 import React, { ReactElement, ReactNode, useState } from "react";
-import * as Styled from './MyModal.styles'
+import * as Styled from './MyBottomSheet.styles'
 
-interface MyModalProps {
+interface MyBottomSheetProps {
     trigger: ReactElement;
     children: ReactNode;
 }
 
-const MyModal = ({ trigger, children }: MyModalProps) => {
+const MyBottomSheet = ({ trigger, children }: MyBottomSheetProps) => {
     const [isModalOpen, setIsModalOpen] = useState(false);
 
     const handleOpenModal = () => {
@@ -21,14 +21,14 @@ const MyModal = ({ trigger, children }: MyModalProps) => {
         <>
             {React.cloneElement(trigger, { onClick: handleOpenModal })}
             {isModalOpen && (
-                <Styled.ModalOverlay onClick={handleCloseModal}>
-                    <Styled.ModalContent onClick={(e) => e.stopPropagation()}>
+                <Styled.BottomSheetOverlay onClick={handleCloseModal}>
+                    <Styled.BottomSheetContent onClick={(e) => e.stopPropagation()}>
                         {children}
-                    </Styled.ModalContent>
-                </Styled.ModalOverlay>
+                    </Styled.BottomSheetContent>
+                </Styled.BottomSheetOverlay>
             )}
         </>
     );
 };
 
-export default MyModal;
+export default MyBottomSheet;

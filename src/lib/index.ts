@@ -1,3 +1,3 @@
-import MyModal from "./components/MyModal";
+import MyBottomSheet from "./components/MyBottomSheet";
 
-export { MyModal };
+export { MyBottomSheet };

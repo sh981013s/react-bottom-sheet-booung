@@ -1,12 +1,12 @@
 import React from 'react';
-import MyModal from "./lib/components/MyModal";
+import MyBottomSheet from "./lib/components/MyBottomSheet";
 
 const App = () => {
   return (
-      <MyModal trigger={<button>모달 열기</button>}>
+      <MyBottomSheet trigger={<button>open BottomSheet</button>}>
         <h2>제목</h2>
         <p>내용</p>
-      </MyModal>
+      </MyBottomSheet>
   );
 }
 
