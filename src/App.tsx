@@ -1,9 +1,12 @@
 import React from 'react';
-import './App.css';
+import MyModal from "./lib/components/MyModal";
 
 const App = () => {
   return (
-    <h1>Hello World</h1>
+      <MyModal trigger={<button>모달 열기</button>}>
+        <h2>제목</h2>
+        <p>내용</p>
+      </MyModal>
   );
 }
 

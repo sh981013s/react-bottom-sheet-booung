@@ -1,5 +1,5 @@
-import React, {ReactElement, ReactNode, useState} from "react";
-import 'react-bottom-sheet-booungi/dist/components/styles.css';
+import React, { ReactElement, ReactNode, useState } from "react";
+import * as Styled from './MyModal.styles'
 
 interface MyModalProps {
     trigger: ReactElement;
@@ -21,11 +21,11 @@ const MyModal = ({ trigger, children }: MyModalProps) => {
         <>
             {React.cloneElement(trigger, { onClick: handleOpenModal })}
             {isModalOpen && (
-                <div className="modal-overlay" onClick={handleCloseModal}>
-                    <div className="modal" onClick={(e) => e.stopPropagation()}>
+                <Styled.ModalOverlay onClick={handleCloseModal}>
+                    <Styled.ModalContent onClick={(e) => e.stopPropagation()}>
                         {children}
-                    </div>
-                </div>
+                    </Styled.ModalContent>
+                </Styled.ModalOverlay>
             )}
         </>
     );

@@ -41,11 +41,11 @@
     "web-vitals": "^2.1.4"
   },
   "scripts": {
-    "start": "react-scripts start",
+    "start": "BROWSER='firefox' react-scripts start",
     "build": "react-scripts build",
     "test": "react-scripts test",
     "eject": "react-scripts eject",
-    "prepare": "rm -rf dist && mkdir dist && tsc && cp src/lib/components/styles.css dist/components/styles.css"
+    "prepare": "rm -rf dist && mkdir dist && tsc && NODE_ENV=production babel src --out-dir dist --ignore '**/*.test.tsx'"
   },
   "eslintConfig": {
     "extends": [
