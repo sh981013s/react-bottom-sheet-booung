@@ -1,5 +1,5 @@
 import React, {ReactElement, ReactNode, useState} from "react";
-import "./styles.css";
+import 'react-bottom-sheet-booungi/dist/components/styles.css';
 
 interface MyModalProps {
     trigger: ReactElement;

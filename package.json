@@ -1,13 +1,20 @@
 {
-  "name": "react-bottom-sheet-booung",
-  "version": "0.1.0",
+  "name": "react-bottom-sheet-booungi",
+  "version": "0.1.6",
   "private": false,
   "description": "A React Bottom Sheet Component",
   "author": "SeungHwan Lee",
-  "keywords": ["react", "bottom", "sheet", "component"],
+  "keywords": [
+    "react",
+    "bottom",
+    "sheet",
+    "component"
+  ],
   "license": "MIT",
   "main": "dist/index.js",
+  "types": "dist/index.d.ts",
   "module": "dist/index.js",
+  "browser": "./browser/spcific/main.js",
   "files": [
     "dist",
     "README.md"
@@ -17,7 +24,6 @@
     "url": "https://github.com/sh981013s/react-bottom-sheet-booung.git"
   },
   "dependencies": {
-    "@babel/polyfill": "^7.12.1",
     "@testing-library/jest-dom": "^5.16.5",
     "@testing-library/react": "^13.4.0",
     "@testing-library/user-event": "^13.5.0",
@@ -25,17 +31,20 @@
     "@types/node": "^16.18.25",
     "@types/react": "^18.2.0",
     "@types/react-dom": "^18.2.1",
-    "react": "^18.2.0",
-    "react-dom": "^18.2.0",
+    "core-js": "^3.6.5",
+    "react": "^17.0.2",
+    "react-dom": "^17.0.2",
     "react-scripts": "5.0.1",
+    "regenerator-runtime": "^0.13.9",
     "typescript": "^4.9.5",
     "web-vitals": "^2.1.4"
   },
   "scripts": {
     "start": "react-scripts start",
-    "build": "rm -rf dist && NODE_ENV=production babel src/lib --out-dir dist --copy-files",
+    "build": "react-scripts build",
     "test": "react-scripts test",
-    "eject": "react-scripts eject"
+    "eject": "react-scripts eject",
+    "prepare": "rm -rf dist && mkdir dist && tsc && cp src/lib/components/styles.css dist/components/styles.css"
   },
   "eslintConfig": {
     "extends": [
@@ -58,6 +67,7 @@
   "devDependencies": {
     "@babel/cli": "^7.21.5",
     "@babel/core": "^7.21.5",
-    "@babel/preset-env": "^7.21.5"
+    "@babel/preset-env": "^7.21.5",
+    "cross-env": "^7.0.3"
   }
 }
