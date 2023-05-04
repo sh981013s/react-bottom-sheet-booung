@@ -1,11 +1,11 @@
-# React Bottom Sheet Booung
+# React Bottom Sheet BooungI
 
 A simple, easy-to-use React library for creating modal-like bottom sheets.
 
 ### Installation
 
 ```bash
-npm install react-bottom-sheet-booung
+npm install react-bottom-sheet-booungi
 ```
 
 ### Usage
