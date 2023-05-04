@@ -32,6 +32,7 @@ module.exports = {
     'no-var': 'error',
     'prefer-arrow-callback': 'error',
     'object-shorthand': 'warn',
+    '@typescript-eslint/no-explicit-any': 'off',
   },
   settings: {
     react: {
