@@ -9,8 +9,8 @@ export type BottomSheetType = FunctionComponent<any>;
  * BottomSheetContextType is the type of the BottomSheetContext
  */
 export interface BottomSheetContextType {
-  showBottomSheet(key: string, component: BottomSheetType): void;
-  hideBottomSheet(key: string): void;
+  showBottomSheet(component: BottomSheetType, overlay?: boolean): void;
+  hideBottomSheet(): void;
 }
 
 /**
