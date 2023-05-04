@@ -1,6 +1,6 @@
 {
   "name": "react-bottom-sheet-booungi",
-  "version": "0.2.2",
+  "version": "0.2.3",
   "private": false,
   "description": "A React Bottom Sheet Component",
   "author": "SeungHwan Lee",
@@ -12,7 +12,7 @@
     "typescript",
     "react-component",
     "react-bottom-sheet",
-    "react-bottom-sheet-booungi"
+    "react-bottom-sheet-booungi",
     "cra"
   ],
   "license": "MIT",
