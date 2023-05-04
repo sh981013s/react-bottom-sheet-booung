@@ -33,46 +33,46 @@ Create a custom bottom sheet component:
 
 
 ```tsx
-// MyModal.tsx
+// MyBottomSheet.tsx
 import React from 'react';
 
-interface MyModalProps {
+interface MyBottomSheetProps {
     onClose: () => void;
 }
 
-const MyModal = ({ onClose }: MyModalProps) => {
+const MyBottomSheet = ({ onClose }: MyBottomSheetProps) => {
     return (
         <div style={{ background: 'white', padding: 20 }}>
-            <h1>My Modal</h1>
-            <p>This is a sample modal content.</p>
+            <h1>My BottomSheet</h1>
+            <p>This is a sample bottom sheet content.</p>
             <button onClick={onClose}>Close</button>
         </div>
     );
 };
 
-export default MyModal;
+export default MyBottomSheet;
 ```
 
 Use the `useBottomSheet` hook to show and hide your custom bottom sheet:
 
 ```tsx
-// ShowModalButton.tsx
+// BottomSheetButton.tsx
 import React from 'react';
 import { useBottomSheet } from 'react-bottom-sheet-booung';
-import MyModal from './MyModal';
+import MyBottomSheet from './MyBottomSheet';
 
-const ShowModalButton = () => {
+const BottomSheetButton = () => {
 const { showBottomSheet } = useBottomSheet();
 
-const showModal = () => {
-  // Show the modal with an optional overlay
-  showBottomSheet(MyModal, true);
+const handleClick = () => {
+  // Show the bottom sheet with an optional overlay
+  showBottomSheet(MyBottomSheet, true);
 };
 
-  return <button onClick={showModal}>Show Modal</button>;
+  return <button onClick={showBottomSheet}>Show Modal</button>;
 };
 
-export default ShowModalButton;
+export default BottomSheetButton;
 ```
 
 ### API
