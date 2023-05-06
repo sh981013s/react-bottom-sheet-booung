@@ -38,9 +38,7 @@ export const BottomSheetProvider = ({ children }: BottomSheetProviderProps) => {
         <>
           {activeBottomSheet.overlay && <Overlay onClick={hideBottomSheet} />}
           <Content isOpened={!!activeBottomSheet}>
-            {React.cloneElement(activeBottomSheet.component, {
-              onClose: hideBottomSheet,
-            })}
+            {React.cloneElement(activeBottomSheet.component)}
           </Content>
         </>
       )}

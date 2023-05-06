@@ -1,2 +1,3 @@
-import MyModal from "./components/MyModal";
-export { MyModal };
+export { BottomSheetProvider } from './BottomSheetProvider';
+export { useBottomSheet } from './useBottomSheet';
+export type { BottomSheetType, BottomSheetContextType, } from './BottomSheetContext';
