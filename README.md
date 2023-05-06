@@ -1,5 +1,7 @@
 # React Bottom Sheet BooungI
 
+<iframe src="https://giphy.com/embed/nPC5zVoRKaIaDYNc0W" width="480" height="276" frameBorder="0" class="giphy-embed" allowFullScreen></iframe>
+
 A simple, easy-to-use React library for creating modal-like bottom sheets. (react 18 supported)
 
 ### Installation
