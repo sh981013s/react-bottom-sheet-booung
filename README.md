@@ -37,17 +37,17 @@ Create a custom bottom sheet component:
 import React from 'react';
 
 interface MyBottomSheetProps {
-    onClose: () => void;
+  onClose: () => void;
 }
 
 const MyBottomSheet = ({ onClose }: MyBottomSheetProps) => {
-    return (
-        <div style={{ background: 'white', padding: 20 }}>
-            <h1>My BottomSheet</h1>
-            <p>This is a sample bottom sheet content.</p>
-            <button onClick={onClose}>Close</button>
-        </div>
-    );
+  return (
+    <div style={{ background: 'white', padding: 20 }}>
+      <h1>My BottomSheet</h1>
+      <p>This is a sample bottom sheet content.</p>
+      <button onClick={onClose}>Close</button>
+    </div>
+  );
 };
 
 export default MyBottomSheet;
@@ -62,14 +62,14 @@ import { useBottomSheet } from 'react-bottom-sheet-booung';
 import MyBottomSheet from './MyBottomSheet';
 
 const BottomSheetButton = () => {
-const { showBottomSheet } = useBottomSheet();
+  const { showBottomSheet, hideBottomSheet } = useBottomSheet();
 
-const handleClick = () => {
-  // Show the bottom sheet with an optional overlay
-  showBottomSheet(MyBottomSheet, true);
-};
+  const handleClick = () => {
+    // Show the bottom sheet with an optional overlay
+    showBottomSheet(<MyBottomSheet onClose={hideBottomSheet} />, true);
+  };
 
-  return <button onClick={showBottomSheet}>Show Modal</button>;
+  return <button onClick={handleClick}>Show Bottom Sheet</button>;
 };
 
 export default BottomSheetButton;

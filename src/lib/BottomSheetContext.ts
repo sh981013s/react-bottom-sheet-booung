@@ -1,9 +1,9 @@
-import { createContext, FunctionComponent } from 'react';
+import { createContext } from 'react';
 
 /**
  * BottomSheetType is the type of the component that will be rendered in the modal
  */
-export type BottomSheetType = FunctionComponent<any>;
+export type BottomSheetType = React.ReactElement;
 
 /**
  * BottomSheetContextType is the type of the BottomSheetContext

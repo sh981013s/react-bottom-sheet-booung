@@ -3,23 +3,24 @@ import { BottomSheetProvider, useBottomSheet } from './lib';
 
 interface MyModalProps {
   onClose: () => void;
+  name: string;
 }
 
-const MyModal = ({ onClose }: MyModalProps) => {
+const MyModal = ({ onClose, name }: MyModalProps) => {
   return (
     <div>
       <h1>My Modal</h1>
-      <p>This is a sample modal content.</p>
+      <p>{name}</p>
       <button onClick={onClose}>Close</button>
     </div>
   );
 };
 
 const ModalButton = () => {
-  const { showBottomSheet } = useBottomSheet();
+  const { showBottomSheet, hideBottomSheet } = useBottomSheet();
 
   const showModal = () => {
-    showBottomSheet(MyModal, true);
+    showBottomSheet(<MyModal name="asd" onClose={hideBottomSheet} />, true);
   };
 
   return <button onClick={showModal}>Show Modal</button>;
