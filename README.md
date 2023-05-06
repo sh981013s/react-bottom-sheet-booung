@@ -1,6 +1,6 @@
 # React Bottom Sheet BooungI
 
-A simple, easy-to-use React library for creating modal-like bottom sheets.
+A simple, easy-to-use React library for creating modal-like bottom sheets. (react 18 supported)
 
 ### Installation
 
