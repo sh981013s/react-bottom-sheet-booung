@@ -16,7 +16,8 @@
     "noEmit": false,
     "jsx": "react-jsx",
     "declaration": true,
-    "outDir": "./dist"
+    "outDir": "./dist",
+    "types": ["react/next", "react-dom/next"]
   },
   "include": ["./src/lib/**/*.tsx", "./src/lib/**/*.ts"]
 }
