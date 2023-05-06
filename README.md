@@ -66,7 +66,7 @@ const BottomSheetButton = () => {
 
   const handleClick = () => {
     // Show the bottom sheet with an optional overlay
-    showBottomSheet(<MyBottomSheet onClose={hideBottomSheet} />, true);
+    showBottomSheet({ content: <MyBottomSheet onClose={hideBottomSheet} />, overlay: true });  
   };
 
   return <button onClick={handleClick}>Show Bottom Sheet</button>;
@@ -86,10 +86,12 @@ The `BottomSheetProvider` component should be used to wrap your app or the part 
 The `useBottomSheet` hook provides two functions, `showBottomSheet` and `hideBottomSheet`, to control the display of bottom sheets.
 showBottomSheet(component: BottomSheetType, overlay?: boolean)
 
-- `component`: The bottom sheet component to display.
-- `overlay` (optional): A boolean value that indicates whether an overlay should be displayed behind the bottom sheet. Default is false.
+### `showBottomSheet(options: { content: BottomSheetType; overlay?: boolean })`
 
-`hideBottomSheet()`
+- `options.component`: (required) The bottom sheet component to display.
+- `options.overlay` (optional): A boolean value that indicates whether an overlay should be displayed behind the bottom sheet. Default is false.
+
+### `hideBottomSheet()`
 
 Hides the currently displayed bottom sheet.
 

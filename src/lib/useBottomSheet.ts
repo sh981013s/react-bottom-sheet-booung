@@ -4,8 +4,11 @@ import { BottomSheetContext, BottomSheetType } from './BottomSheetContext';
 export const useBottomSheet = () => {
   const context = useContext(BottomSheetContext);
 
-  const showBottomSheet = (component: BottomSheetType, overlay: boolean) => {
-    context.showBottomSheet(component, overlay);
+  const showBottomSheet = (options: {
+    content: BottomSheetType;
+    overlay?: boolean;
+  }) => {
+    context.showBottomSheet(options);
   };
 
   const hideBottomSheet = () => {

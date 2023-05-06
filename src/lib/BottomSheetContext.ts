@@ -9,7 +9,10 @@ export type BottomSheetType = React.ReactElement;
  * BottomSheetContextType is the type of the BottomSheetContext
  */
 export interface BottomSheetContextType {
-  showBottomSheet(component: BottomSheetType, overlay?: boolean): void;
+  showBottomSheet(options: {
+    content: BottomSheetType;
+    overlay?: boolean;
+  }): void;
   hideBottomSheet(): void;
 }
 

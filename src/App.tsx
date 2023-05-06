@@ -19,7 +19,7 @@ const ModalButton = () => {
   const { showBottomSheet } = useBottomSheet();
 
   const showModal = () => {
-    showBottomSheet(<MyModal name="asd" />, true);
+    showBottomSheet({ content: <MyModal name="John Doe" />, overlay: true });
   };
 
   return <button onClick={showModal}>Show Modal</button>;
