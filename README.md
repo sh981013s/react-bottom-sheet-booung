@@ -19,7 +19,7 @@ First, wrap your app with the `BottomSheetProvider`:
 ```tsx
 // App.tsx
 import React from 'react';
-import { BottomSheetProvider } from 'react-bottom-sheet-booung';
+import { BottomSheetProvider } from 'react-bottom-sheet-booungi';
 
 const App = () => {
   return (
@@ -61,7 +61,7 @@ Use the `useBottomSheet` hook to show and hide your custom bottom sheet:
 ```tsx
 // BottomSheetButton.tsx
 import React from 'react';
-import { useBottomSheet } from 'react-bottom-sheet-booung';
+import { useBottomSheet } from 'react-bottom-sheet-booungi';
 import MyBottomSheet from './MyBottomSheet';
 
 const BottomSheetButton = () => {
